@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #07321f;
+    color: #fff;
+    font-family: 'Tajawal', sans-serif;
+}
+.header{
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header h1{
+    font-size: 40px;
+}
+.header nav select{
+    background: #426f5b;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+}
+#hero{
+    max-width: 80% ;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+#hero .right{ 
+    width: 22%;   
+}
+#hero .right p{
+    font-size: 20px;
+    text-decoration: underline;
+}
+#hero .right h2{
+    font-size: 90px;
+    margin-top: 20px;
+}
+#hero .left{
+    width: 78%;
+    padding: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: 250px 250px ;
+    padding-top: 50px;
+    gap: 8px;
+    
+}
+#hero .left .card{
+    background-color: #426f5b;
+    padding: 25px;
+
+}
+#hero .left .card h2{
+    font-size: 60px;
+}
+#hero .left .card b{
+    font-size: 40px;
+    color: #00ff8c;
+}
+#hero .left .card p{
+    font-size: 19px;
+}
+@media (max-width: 1008px) {
+    .header{
+        flex-direction: column;
+    }
+    #hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    #hero .right{ 
+        width: 100%;
+        text-align: center;   
+    }
+    #hero .left {
+        width: 100%;
+        padding: 10px;
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(5, auto);
+    }
+    #hero .left .card:nth-child(4), #hero .left .card:nth-child(5) {
+        grid-column: auto;
+    }
+}
